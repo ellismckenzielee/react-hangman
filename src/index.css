@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+h1 {
+  color: #540b0e;
+  font-size: 2.5em;
+}
+
+#displayGuesses {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  justify-content: center;
+}
+
+#imageBackground {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #540b0e;
+  height: 550px;
+  position: relative;
+  text-align: auto;
+  justify-content: center;
+}
+
+#rope {
+  width: 10px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 11%;
+}
+
+#top {
+  width: 150px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  transform: translate(-100%);
+  left: 50%;
+  top: 11%;
+}
+
+#side {
+  width: 10px;
+  height: 440px;
+  background-color: white;
+  position: absolute;
+  left: 20%;
+  top: 11%;
+}
+
+#base {
+  width: 140px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  left: 48%;
+  top: 90%;
+  transform: translate(-99%);
+}
+
+#head {
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  margin: 0 auto;
+  left: 50%;
+  top: 15%;
+}
+
+#body {
+  width: 10px;
+  height: 130px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 25%;
+}
+
+#lArm {
+  width: 80px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  transform: translate(-100%);
+  left: 50%;
+  top: 32%;
+}
+
+#rArm {
+  width: 100px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 32%;
+}
+
+#lLeg {
+  width: 120px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  left: 32%;
+  top: 57%;
+  transform: rotate(-60deg);
+}
+
+#rLeg {
+  width: 120px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  transform: translate(-100%);
+  left: 44%;
+  top: 57%;
+  transform: rotate(60deg);
+}
+
+#displayGuesses {
+  background-color: #335c67;
+  color: #fff3b0;
+}
+
+#input {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+select {
+  padding: 0.2em;
+}
+
+button {
+  padding: 0.2em;
+}
