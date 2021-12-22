@@ -164,3 +164,13 @@ button {
 .successfulGuess {
   border: 1px solid black;
 }
+
+.input {
+  padding: 0.5em;
+  width: 100px;
+  margin: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}

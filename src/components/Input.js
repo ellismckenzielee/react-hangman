@@ -37,7 +37,7 @@ const Input = ({ updateAttempts, word, updateFoundLetters }) => {
         <fieldset>
           <legend>Please pick a character!</legend>
           <label></label>
-          <select onChange={(e) => updateChosenChar(e.target.value)}>
+          <select className="input" onChange={(e) => updateChosenChar(e.target.value)}>
             <option> </option>
             {remainingChars.map((char) => {
               return (
@@ -47,7 +47,7 @@ const Input = ({ updateAttempts, word, updateFoundLetters }) => {
               );
             })}
           </select>
-          <button> Submit </button>
+          <button className="input"> Submit </button>
         </fieldset>
         <p>Used Letters: {usedLetters}</p>
       </form>

@@ -7,6 +7,7 @@ const Result = ({ word, updateAttempts, updateFoundLetters, winner, setPlay }) =
       <h2>{message}</h2>
       <p> The word was: {word}</p>
       <button
+        className="input"
         onClick={() => {
           updateAttempts(0);
           updateFoundLetters([]);
