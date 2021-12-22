@@ -33,11 +33,14 @@ function App() {
 
   let content;
   if (isLoading) {
-    content = <p>is loading...</p>;
+    content = (
+      <div>
+        <p>is loading...</p>;
+      </div>
+    );
   } else if (gameOver === true || winner === true) {
     content = (
       <div>
-        <Header />
         <Result
           word={word}
           setPlay={setPlay}
@@ -50,13 +53,17 @@ function App() {
   } else {
     content = (
       <div>
-        <Header />
         <Game word={word} attempts={attempts} foundLetters={foundLetters} />
         <Input word={word} updateAttempts={updateAttempts} updateFoundLetters={updateFoundLetters} />{" "}
       </div>
     );
   }
-  return <div className="app">{content}</div>;
+  return (
+    <div className="app">
+      <Header />
+      {content}
+    </div>
+  );
 }
 
 export default App;
