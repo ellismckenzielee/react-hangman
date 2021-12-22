@@ -19,6 +19,8 @@ h1 {
 
 #displayGuesses {
   width: 80%;
+  background-color: #335c67;
+  color: #fff3b0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
@@ -137,13 +139,8 @@ h1 {
   transform: rotate(60deg);
 }
 
-#displayGuesses {
-  background-color: #335c67;
-  color: #fff3b0;
-}
-
 #input {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   padding-top: 2em;
 }
@@ -154,4 +151,14 @@ select {
 
 button {
   padding: 0.2em;
+}
+
+.app {
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+}
+
+.successfulGuess {
+  border: 1px solid black;
 }
