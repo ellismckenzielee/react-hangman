@@ -28,9 +28,11 @@ h1 {
 }
 
 #imageBackground {
-  width: 500px;
+  width: 300px;
   margin: 0 auto;
-  background-color: #540b0e;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
   height: 550px;
   position: relative;
   text-align: auto;
@@ -40,7 +42,7 @@ h1 {
 #rope {
   width: 10px;
   height: 50px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -48,9 +50,9 @@ h1 {
 }
 
 #top {
-  width: 150px;
+  width: 30%;
   height: 10px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   transform: translate(-100%);
   left: 50%;
@@ -60,7 +62,7 @@ h1 {
 #side {
   width: 10px;
   height: 440px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   left: 20%;
   top: 11%;
@@ -69,18 +71,18 @@ h1 {
 #base {
   width: 140px;
   height: 10px;
-  background-color: white;
+  background-color: black;
   position: absolute;
-  left: 48%;
+  left: 66.5%;
   top: 90%;
   transform: translate(-99%);
 }
 
 #head {
-  background-color: white;
+  background-color: black;
   height: 60px;
   width: 60px;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%);
@@ -92,7 +94,7 @@ h1 {
 #body {
   width: 10px;
   height: 130px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -100,9 +102,9 @@ h1 {
 }
 
 #lArm {
-  width: 80px;
+  width: 65px;
   height: 10px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   transform: translate(-100%);
   left: 50%;
@@ -110,9 +112,9 @@ h1 {
 }
 
 #rArm {
-  width: 100px;
+  width: 65px;
   height: 10px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   left: 50%;
   top: 32%;
@@ -121,9 +123,9 @@ h1 {
 #lLeg {
   width: 120px;
   height: 10px;
-  background-color: white;
+  background-color: black;
   position: absolute;
-  left: 32%;
+  left: 20%;
   top: 57%;
   transform: rotate(-60deg);
 }
@@ -131,10 +133,10 @@ h1 {
 #rLeg {
   width: 120px;
   height: 10px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   transform: translate(-100%);
-  left: 44%;
+  left: 40%;
   top: 57%;
   transform: rotate(60deg);
 }
