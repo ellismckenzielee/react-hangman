@@ -5,6 +5,7 @@ import Input from "./components/Input";
 import { useState, useEffect } from "react";
 import Result from "./components/Result";
 import axios from "axios";
+import { createUniqueArray } from "./utils/utils";
 
 function App() {
   const [word, setWord] = useState("");
@@ -12,10 +13,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [attempts, updateAttempts] = useState(0);
   const [foundLetters, updateFoundLetters] = useState([]);
-  const uniques = [];
   const [play, setPlay] = useState(false);
 
-  console.log(uniques.length === foundLetters.length);
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -27,11 +26,11 @@ function App() {
       })
       .catch(console.log);
   }, [play]);
-  word.split("").forEach((letter) => {
-    if (!uniques.includes(letter)) uniques.push(letter);
-  });
+
+  const uniques = createUniqueArray(word);
   const gameOver = attempts >= 8 || (uniques.length === foundLetters.length && uniques.length !== 0);
   const winner = uniques.length === foundLetters.length && uniques.length !== 0;
+
   let content;
   if (isLoading) {
     content = <p>is loading...</p>;
