@@ -10,7 +10,9 @@ const Result = ({ word, updateAttempts, updateFoundLetters, winner, setPlay }) =
         onClick={() => {
           updateAttempts(0);
           updateFoundLetters([]);
-          setPlay(true);
+          setPlay((prev) => {
+            return !prev;
+          });
         }}
       >
         {" "}
