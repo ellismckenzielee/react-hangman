@@ -17,7 +17,7 @@ const Game = ({ word, attempts, foundLetters }) => {
       <section id="displayGuesses">
         {word.split("").map((letter, index) => {
           return (
-            <div key={letter + index.toString()}>
+            <div className="successfulGuess" key={letter + index.toString()}>
               <p>{foundLetters.includes(letter) ? letter : "_"} </p>
             </div>
           );
