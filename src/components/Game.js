@@ -18,7 +18,7 @@ const Game = ({ word, attempts, foundLetters }) => {
         {word.split("").map((letter, index) => {
           return (
             <div className="successfulGuess" key={letter + index.toString()}>
-              <p>{foundLetters.includes(letter) ? letter : "_"} </p>
+              <p>{foundLetters.includes(letter) ? letter : /[-]/.test(letter) ? "(dash)" : "_"} </p>
             </div>
           );
         })}
