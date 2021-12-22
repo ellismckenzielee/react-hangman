@@ -21,7 +21,6 @@ function App() {
       .get("https://random-word-form.herokuapp.com/random/noun")
       .then(({ data }) => {
         setWord(data[0].toUpperCase());
-        setPlay(false);
         setIsLoading(false);
       })
       .catch(console.log);
