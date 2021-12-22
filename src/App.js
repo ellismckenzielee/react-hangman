@@ -27,7 +27,7 @@ function App() {
   }, [play]);
 
   const uniques = createUniqueArray(word);
-  const gameOver = attempts >= 8 || (uniques.length === foundLetters.length && uniques.length !== 0);
+  const gameOver = attempts >= 11 || (uniques.length === foundLetters.length && uniques.length !== 0);
   const winner = uniques.length === foundLetters.length && uniques.length !== 0;
 
   let content;

@@ -12,7 +12,7 @@ const Game = ({ word, attempts, foundLetters }) => {
             })}
           </div>
         </image>
-        <p> remaining attempts: {8 - attempts}</p>
+        <p> remaining attempts: {11 - attempts}</p>
       </section>
       <section id="displayGuesses">
         {word.split("").map((letter, index) => {
