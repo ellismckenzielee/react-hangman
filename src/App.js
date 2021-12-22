@@ -8,27 +8,36 @@ import axios from "axios";
 
 function App() {
   const [word, setWord] = useState("");
+  console.log(word);
+  const [isLoading, setIsLoading] = useState(true);
   const [attempts, updateAttempts] = useState(0);
   const [foundLetters, updateFoundLetters] = useState([]);
   const uniques = [];
-  const [play, setPlay] = useState(true);
+  const [play, setPlay] = useState(false);
+
+  console.log(uniques.length === foundLetters.length);
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get("https://random-word-form.herokuapp.com/random/noun")
       .then(({ data }) => {
         setWord(data[0].toUpperCase());
         setPlay(false);
+        setIsLoading(false);
       })
       .catch(console.log);
   }, [play]);
   word.split("").forEach((letter) => {
     if (!uniques.includes(letter)) uniques.push(letter);
   });
-  console.log(uniques);
-  if (attempts >= 8 || uniques.length === foundLetters.length) {
-    const winner = uniques.length === foundLetters.length;
-    return (
-      <div className="App">
+  const gameOver = attempts >= 8 || (uniques.length === foundLetters.length && uniques.length !== 0);
+  const winner = uniques.length === foundLetters.length && uniques.length !== 0;
+  let content;
+  if (isLoading) {
+    content = <p>is loading...</p>;
+  } else if (gameOver === true || winner === true) {
+    content = (
+      <div>
         <Header />
         <Result
           word={word}
@@ -40,14 +49,15 @@ function App() {
       </div>
     );
   } else {
-    return (
-      <div className="App">
+    content = (
+      <div>
         <Header />
         <Game word={word} attempts={attempts} foundLetters={foundLetters} />
-        <Input word={word} updateAttempts={updateAttempts} updateFoundLetters={updateFoundLetters} />
+        <Input word={word} updateAttempts={updateAttempts} updateFoundLetters={updateFoundLetters} />{" "}
       </div>
     );
   }
+  return <div className="app">{content}</div>;
 }
 
 export default App;
