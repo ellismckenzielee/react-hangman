@@ -1,6 +1,8 @@
 # Hangman
 
-### This is a simple hangman game built using React and the random word form API. Visit '' to see it in action!
+### This is a simple hangman game built using React and the random word form API. Visit 
+## https://hardcore-davinci-d783fd.netlify.app
+### to see it in action!
 
 ## Installation
 
